@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import styles from './styles/main.scss'
+import nubank from './assets/nubank.png'
 
 class CreditCard extends Component {
   constructor(props) {
     super(props)
-    this.state = {
 
+    const logos = {
+      nubank,
+    }
+
+    this.state = {
+      logos,
+      ...props,
     }
   }
 
@@ -19,14 +26,13 @@ class CreditCard extends Component {
   }
 
   render() {
-    const bank = this.props.bank
-    const type = this.props.type
+    const { bank, type, logos } = this.state
 
     return (
       <div className={`${styles.card} ${styles[bank]} ${styles[type]}`}>
         <div className={styles.front}>
           <figure className={styles.figure}>
-            <img src="./assets/logos/nubank-white.png" className={styles.logo} />
+            <img src={logos[bank]} className={styles.logo} />
           </figure>
           <div className={styles.chip}>
             <div className={styles.trace}></div>
