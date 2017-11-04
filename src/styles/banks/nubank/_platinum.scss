@@ -1,0 +1,188 @@
+.nubank {
+  &.platinum {
+    background: linear-gradient(90deg, #892a92, #70217a);
+
+    .figure {
+      position: relative;
+      height: 40px;
+      margin: 0;
+
+      &::after {
+        content: "PLATINUM";
+        font-size: 0.45em;
+        letter-spacing: 4px;
+        color: var(--white);
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: calc(-100% - 15px);
+      }
+
+      .logo {
+        width: var(--widthLogo);
+        position: absolute;
+        right: 50%;
+        transform: translate(calc(var(--widthLogo) / 2), 20px);
+      }
+    }
+
+    .chip {
+      width: 50px;
+      height: 40px;
+      background: radial-gradient(#d9a56c, #b18457);
+      border-radius: 5px;
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translate(33px, -40px);
+      overflow: hidden;
+
+      .trace {
+        width: 50px;
+        height: 40px;
+        border-radius: 13px;
+        background: transparent;
+        border: 1px solid #666;
+        position: absolute;
+        z-index: 0;
+
+        &:nth-child(1) {
+          transform: translate(37px, 15px);
+        }
+
+        &:nth-child(2) {
+          transform: translate(15px, 30px);
+        }
+
+        &:nth-child(3) {
+          transform: translate(-37px, -15px);
+        }
+
+        &:nth-child(4) {
+          transform: translate(-15px, -30px);
+        }
+      }
+    }
+
+    .number {
+      font-family: var(--font);
+      font-size: 1.15em;
+      font-weight: normal;
+      color: var(--white);
+      letter-spacing: 2.5px;
+      text-align: center;
+      margin-left: -20px;
+      margin-top: 80px;
+      z-index: 1;
+      position: relative;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+
+    .date {
+      position: absolute;
+      width: 40%;
+      font-size: .9em;
+      display: flex;
+      justify-content: space-between;
+      color: var(--white);
+      font-family: var(--font);
+      bottom: 45px;
+      transform: translate(60px, 0px);
+
+      .expiration{
+        position: relative;
+        left: -25px;
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    .holderName {
+      font-family: var(--font);
+      font-size: .9em;
+      font-weight: normal;
+      color: var(--white);
+      letter-spacing: 2.5px;
+      transform: translate(35px, 25px);
+      position: relative;
+      filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+    }
+
+    .flag {
+      right: 30px;
+      top: 45%;
+      border-radius: 25px;
+      transform: translate(0, -28px);
+      position: absolute;
+      height: 110px;
+      width: 80px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+
+      .globe {
+        --margin: 5px;
+        width: calc(100% - (var(--margin) * 2));
+        background-color: #b7b2b8;
+        height: 50%;
+        border-radius: 20px;
+        margin: var(--margin);
+        background: repeating-linear-gradient(
+          0deg,
+          #dbd1dc,
+          #dbd1dc 5px,
+          #b2aab5 7px,
+          #b2aab5 5px
+        );
+
+        &::after,
+        &::before {
+          content: "\f0ac";
+          font-family: FontAwesome;
+          color: rgba(0, 0, 0, 0.2);
+          font-size: 3em;
+          top: 6px;
+          left: 2px;
+          position: absolute;
+        }
+
+        &::after {
+          transform: translateX(10px);
+        }
+
+        &::before {
+          transform: translateX(25px);
+        }
+      }
+
+      .red {
+        position: absolute;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ce0e1d;
+      }
+
+      .yellow {
+        position: absolute;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e39833;
+
+        &::after {
+          content: "MasterCard";
+          position: absolute;
+          font-size: 0.7em;
+          top: 50%;
+          transform: translate(-25px, -7px);
+          font-family: var(--masterFont);
+          font-style: italic;
+          font-weight: 800;
+          color: var(--white);
+          filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+        }
+      }
+    }
+  }
+}
