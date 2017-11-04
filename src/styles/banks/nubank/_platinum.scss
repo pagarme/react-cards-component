@@ -132,25 +132,28 @@
           #b2aab5 7px,
           #b2aab5 5px
         );
+        position: relative;
 
         &::after,
         &::before {
-          content: "\f0ac";
-          font-family: FontAwesome;
-          color: rgba(0, 0, 0, 0.2);
-          font-size: 3em;
-          top: 6px;
-          left: 2px;
+          content: " ";
+          background-image: url("../assets/earth-globe.svg");
+          width: 2.5rem;
+          height: 2.5rem;
+          background-size: 100% 100%;
+          transform: translate(-50%, -50%);
+          top: 50%;
           position: absolute;
         }
 
-        &::after {
-          transform: translateX(10px);
+        &::before {
+          left: 35%;
         }
 
-        &::before {
-          transform: translateX(25px);
+        &::after {
+          left: 65%;
         }
+
       }
 
       .red {
