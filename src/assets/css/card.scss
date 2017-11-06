@@ -21,6 +21,17 @@ $textShadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
       border-radius: 10px;
       z-index: 1;
 
+      .logo {
+        --widthLogo: 120px;
+        position: absolute;
+        right: 50%;
+        transform: translate(calc(var(--widthLogo) / 2), 15px);
+
+        img {
+          width: var(--widthLogo);
+        }
+      }
+
       .chip {
         position: absolute;
         width: 50px;
@@ -133,7 +144,7 @@ $textShadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
       transform: rotateY(180deg);
 
       .front {
-        .figure {
+        .logo {
           display: none;
         }
 

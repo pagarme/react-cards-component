@@ -1,0 +1,47 @@
+.card {
+  &.bradesco {
+    &.black {
+      background: #000;
+
+      &.flipped {
+        background: linear-gradient(90deg, #353535, #111);
+      }
+
+      .logo {
+        transform: translate(30px, 15px)
+      }
+
+      .chip {
+        top: 29%;
+        left: 8%;
+      }
+
+      .number {
+        top: 53%;
+        left: 10%;
+      }
+
+      .expiration {
+        top: 146px;
+        left: 203px;
+
+        &:before {
+          content: "valid thru";
+          text-transform: uppercase;
+          position: absolute;
+          font-size: 0.425rem;
+          opacity: .3;
+          top: 5px;
+          left: -50px;
+          color: #FFF;
+        }
+      }
+
+      .holderName {
+        top: 180px;
+        left: 30px;
+        font-size: 0.8em;
+      }
+    }
+  }
+}

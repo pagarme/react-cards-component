@@ -10,16 +10,6 @@
       background: linear-gradient(to bottom right, #833e85 0%, #1b021f 100%);
     }
 
-    .figure {
-      .logo {
-        --widthLogo: 120px;
-        width: var(--widthLogo);
-        position: absolute;
-        right: 50%;
-        transform: translate(calc(var(--widthLogo) / 2), 15px);
-      }
-    }
-
     .chip {
       top: 29%;
       left: 8%;

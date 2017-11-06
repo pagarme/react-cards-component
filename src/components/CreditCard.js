@@ -29,12 +29,11 @@ const CreditCard = (props) => {
     <div className={styles.cardWrapper}>
       <div className={classNames()}>
         <div className={styles.front}>
-          <figure className={styles.figure}>
+          <div className={styles.logo}>
             <img
-              className={styles.logo}
               alt={bank}
               src={logos[bank]}/>
-          </figure>
+          </div>
           <div className={styles.chip}>
             <div className={styles.trace}></div>
             <div className={styles.trace}></div>
