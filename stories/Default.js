@@ -8,6 +8,12 @@ class CardContainer extends Component {
     this.state = {
       flipped: false
     }
+    this.handleFlip = this.handleFlip.bind(this)
+  }
+  
+  handleFlip() {
+    const flipped = !this.state.flipped
+    this.setState({ flipped })
   }
 
   render() {
@@ -23,10 +29,7 @@ class CardContainer extends Component {
           flipped={this.state.flipped}
         />
         <br />
-        <button onClick={() => {
-          const flipped = !this.state.flipped
-          this.setState({ flipped })
-        }}>
+        <button onClick={this.handleFlip}>
           Flip the card
         </button>
       </div>
