@@ -2,14 +2,19 @@
   "name": "react-payment-card-component",
   "version": "0.1.0",
   "private": true,
+  "main": "./lib/index.js",
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
   "dependencies": {
-    "@storybook/react": "3.2.15",
     "classnames": "2.2.5",
-    "prop-types": "15.6.0",
-    "react": "16.1.1",
-    "react-dom": "16.1.1"
+    "prop-types": "15.6.0"
   },
   "devDependencies": {
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
+    "@storybook/react": "3.2.15",
     "@storybook/storybook-deployer": "2.0.0",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -115,6 +120,10 @@
       "comma-dangle": [
         "error",
         "always-multiline"
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        "./stories/**/*.js"
       ],
       "react/jsx-filename-extension": 0,
       "react/jsx-no-bind": [
